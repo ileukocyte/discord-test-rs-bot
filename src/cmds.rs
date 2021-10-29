@@ -19,7 +19,7 @@ lazy_static! {
     ];
 }
 
-pub type CommandUsages = Vec<Vec<&'static str>>;
+pub type CommandUsages<'a> = Vec<Vec<&'a str>>;
 
 #[async_trait]
 pub trait Command: Send + Sync {
